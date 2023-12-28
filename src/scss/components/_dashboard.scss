@@ -1,0 +1,29 @@
+.dashboard-grid-container {
+    display: grid;
+    grid-template-columns: .9fr 5fr;
+}
+.menu-lateral {
+    @include svg-bg;
+
+    width: 100%;
+    height: 100vh;
+    ul {
+        @include d-flex(column, wrap, center, flex-start, 0.5rem);
+        margin: 2rem;
+        li {
+            padding-inline: .5rem;
+            a {
+                color: $color-primary;
+                font-size: 1rem;
+                i {
+                    margin-inline-end: .5rem;
+                }
+                &:hover {
+                    color: $color-ligth;
+                    text-shadow: 3px 2px 10px $color-ligth;
+                }
+
+            }
+        }
+    }
+}

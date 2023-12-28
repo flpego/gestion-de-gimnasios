@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+    <title>Registra tu gimnasio</title>
+  </head>
+  <body>
+    <div class="index-register-container flex-center">
+      <div class="login-container">
+        <div class="bg-solid">
+          <h1>Bienvenido</h1>
+
+          <h3>Registra Tu Gimnasio</h3>
+        </div>
+
+        <section class="form-register">
+          <form data-form-register>
+            <div class="inputs-container">
+              <label for="user">Nombre de Usuario:</label>
+              <div class="input">
+                <input type="text" id="user" name="user" required />
+                <img src="/public/assets/icons/user-solid.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="inputs-container">
+              <label for="user">Nombre del Gimnasio:</label>
+              <div class="input">
+                <input type="text" id="user" name="user" required />
+                <img src="/public/assets/icons/user-solid.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="inputs-container">
+              <label for="pass">Contraseña:</label>
+              <div class="input">
+                <input type="password" id="pass" name="pass" required />
+                <img src="/public/assets/icons/key-solid.svg" />
+              </div>
+            </div>
+
+            <div class="button-container">
+              <button type="submit">Iniciar Sesión</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

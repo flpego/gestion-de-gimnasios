@@ -1,0 +1,25 @@
+
+.estado-Activo {
+    
+    background-color: rgba(0, 190, 0, 0.747);
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px rgb(0, 190, 0);
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.estado-Vencido {
+    @extend .estado-Activo;
+    background-color: rgba(199, 20, 20, 0.822);
+
+    box-shadow: 1px 1px 10px rgb(190, 0, 0);
+
+    font-size: .9rem;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

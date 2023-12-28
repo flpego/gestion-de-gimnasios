@@ -1,0 +1,7 @@
+body {
+    background: $color-dark;
+    @include svg-bg2;
+}
+main {
+    background-color: $color-ligth;
+}

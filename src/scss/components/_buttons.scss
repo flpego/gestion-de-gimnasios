@@ -1,0 +1,24 @@
+$color-green: rgba(0, 190, 0, 0.747) ;
+$color-dark-green: #0a9600;
+
+.button-style-green {
+   color:$color-dark;
+
+ padding: .5rem 1rem;
+ border-radius: 100vmax;
+ background:$color-green;
+ font-size: .8rem;
+ transform: scale(1.1);
+ transition: .4s;
+ &:hover {
+   background: #fff;
+      color:$color-violet;
+    cursor: pointer;
+    border: none;
+    border-top: 1px solid $color-violet;
+    border-bottom: 1px solid $color-violet;
+ }
+}
+
+
+

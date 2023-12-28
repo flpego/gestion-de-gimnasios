@@ -1,0 +1,28 @@
+header {
+    padding: 1rem;
+    background-color: $color-dark;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    nav {
+        margin-inline: 3rem;
+        ul {
+            @include d-flex(row, wrap, space-between, center, 0);
+            list-style: none;
+            li {
+                color: $color-primary;
+                button {
+                    background-color: $color-dark;
+                    font-size: 1.5rem;
+                    border: none;
+                }
+                i {
+                    padding-inline: 2rem;
+                    color: $color-primary;
+                    &:hover {
+                        text-shadow: 1px 1px 15px $color-ligth;
+                    }
+                }
+            }
+        }
+    }
+}
