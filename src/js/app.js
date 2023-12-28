@@ -12,7 +12,9 @@ export const app = () => {
             loginManagers.login()
         }
     }
-    membersManager.renderMembers(data)
+    if (window.location.pathname.includes("/src/pages/miembros.html")) {
+        membersManager.renderMembers(data)
+    }
 }
 
 

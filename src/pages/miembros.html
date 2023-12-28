@@ -58,7 +58,9 @@
               >
             </li>
             <li>
-              <a href="/src/pages/users.html"> <i class="fa-solid fa-users"></i>Usuarios</a>
+              <a href="/src/pages/users.html">
+                <i class="fa-solid fa-users"></i>Usuarios</a
+              >
             </li>
             <li>
               <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
@@ -80,9 +82,43 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
             </form>
-            <button class="button-style-green position-sticky">
-              <i class="fa-solid fa-user-plus"></i>(nuevo miembro)
+            <button class="button-style-green" data-miembro-add-button>
+              <i class="fa-solid fa-user-plus"></i>
             </button>
+          </div>
+
+          <div class="ventana-modal" data-miembros-agregar-modal>
+            <section class="form-register">
+              <form data-form-add-member>
+                <div class="inputs-container">
+                  <label for="user-name">Nombre y apellido del Cliente:</label>
+                  <div class="input">
+                    <input type="text" id="user-name" name="user" required data-input-user-name />
+                    <img src="/public/assets/icons/user-solid.svg" alt="" />
+                  </div>
+                </div>
+    
+                <div class="inputs-container">
+                  <label for="telefono">Telefono:</label>
+                  <div class="input">
+                    <input type="text" id="telefono" name="telefono" required  data-input-telefono/>
+                    <img src="/public/assets/icons/user-solid.svg" alt="" />
+                  </div>
+                </div>
+    
+                <div class="inputs-container">
+                  <label for="dni">DNI:</label>
+                  <div class="input">
+                    <input type="text" id="dni" name="dni" required data-input-dni/>
+                    <img src="/public/assets/icons/key-solid.svg" />
+                  </div>
+                </div>
+    
+                <div class="button-container">
+                  <button type="submit">Agregar</button>
+                </div>
+              </form>
+            </section>
           </div>
 
           <div class="miembros-container">
@@ -99,15 +135,12 @@
                   <th>Opciones</th>
                 </tr>
               </thead>
-              <tbody data-miembros-tbody>
-
-              </tbody>
+              <tbody data-miembros-tbody></tbody>
             </table>
           </div>
         </section>
       </div>
     </main>
     <script type="module" src="/main.js"></script>
-
   </body>
 </html>

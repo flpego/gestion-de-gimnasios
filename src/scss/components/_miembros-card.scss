@@ -2,7 +2,7 @@
     h1 {
         margin: 1rem;
     }
-
+    padding: 1rem;
     .miembros-header {
         display: flex;
         align-items: center;
@@ -65,4 +65,26 @@ tr {
             }
         }
     }
+}
+
+.ventana-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.856);
+    section {
+        width: 60%;
+    }
+  
+}
+
+.ventana-modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .9s;
+
 }
