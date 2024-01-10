@@ -1,6 +1,6 @@
 .dashboard-grid-container {
     display: grid;
-    grid-template-columns: .9fr 5fr;
+    grid-template-columns: 0.9fr 5fr;
 }
 .menu-lateral {
     @include svg-bg;
@@ -11,19 +11,85 @@
         @include d-flex(column, wrap, center, flex-start, 0.5rem);
         margin: 2rem;
         li {
-            padding-inline: .5rem;
+            padding-inline: 0.5rem;
             a {
                 color: $color-primary;
                 font-size: 1rem;
                 i {
-                    margin-inline-end: .5rem;
+                    margin-inline-end: 0.5rem;
                 }
                 &:hover {
                     color: $color-ligth;
                     text-shadow: 3px 2px 10px $color-ligth;
                 }
-
             }
         }
+    }
+}
+.contenido-principal {
+    width: 100%;
+}
+.miembros-card-link {
+    padding: 0.5rem;
+    background: $color-tertiary;
+    border-radius: 30px;
+    box-shadow: 2px 1px 30px $color-secondary;
+    margin: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+        padding: 0;
+        background: #fff;
+        i {
+            font-size: 1rem;
+        }
+        &:hover {
+            background: rgb(87, 223, 87);
+            i {
+                color: black;
+            }
+        }
+    }
+    i {
+        padding: 1rem;
+        font-size: 2rem;
+        color: goldenrod;
+        text-shadow: 2px 1px 3px gold;
+    }
+    a {
+        color: $color-ligth;
+        &:hover {
+            color: gold;
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        color: rgb(238, 233, 220);
+        font-size: 1.5rem;
+    }
+    #totalMembers {
+        padding: 0.3rem;
+        border: 1px solid gold;
+        border-radius: 100vmax;
+    }
+    h2 {
+        color: #fff;
+        font-weight: 300;
+    }
+}
+.actividad-reciente {
+    width: 70%;
+    ul {
+        padding: 1rem;
+        border-radius: 30px;
+        background: $color-primary;
+    }
+    li {
+        padding: 0.3rem;
+        border-bottom: 1px solid gold;
     }
 }

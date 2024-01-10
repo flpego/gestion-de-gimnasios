@@ -71,13 +71,14 @@
         <section class="contenido-miembros" data-contenido-miembros>
           <div class="miembros-header">
             <h1>Miembros</h1>
-            <form>
+            <form data-buscar>
               <div class="input-div">
                 <input
                   type="text"
                   id="seacrh"
                   name="seacrh"
                   placeholder="Buscar Miembro"
+                  data-filtrar-miembro
                 />
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
@@ -89,31 +90,64 @@
 
           <div class="ventana-modal" data-miembros-agregar-modal>
             <section class="form-register">
+              <div class="close-icon-container" id="close-modal-icon">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </div>
+              <div class="bg-solid flex-center">
+                <h4>Agregar nuevo miembro</h4>
+              </div>
               <form data-form-add-member>
                 <div class="inputs-container">
                   <label for="user-name">Nombre y apellido del Cliente:</label>
                   <div class="input">
-                    <input type="text" id="user-name" name="user" required data-input-user-name />
+                    <input
+                      type="text"
+                      id="user-name"
+                      name="user"
+                      required
+                      data-input-user-name
+                    />
                     <img src="/public/assets/icons/user-solid.svg" alt="" />
                   </div>
                 </div>
-    
+
                 <div class="inputs-container">
                   <label for="telefono">Telefono:</label>
                   <div class="input">
-                    <input type="text" id="telefono" name="telefono" required  data-input-telefono/>
-                    <img src="/public/assets/icons/user-solid.svg" alt="" />
+                    <input
+                      type="text"
+                      id="telefono"
+                      name="telefono"
+                      required
+                      data-input-telefono
+                    />
+                    <img src="/public/assets/icons/phone-solid.svg" alt="" />
                   </div>
                 </div>
-    
+
                 <div class="inputs-container">
                   <label for="dni">DNI:</label>
                   <div class="input">
-                    <input type="text" id="dni" name="dni" required data-input-dni/>
-                    <img src="/public/assets/icons/key-solid.svg" />
+                    <input
+                      type="text"
+                      id="dni"
+                      name="dni"
+                      required
+                      data-input-dni
+                    />
                   </div>
                 </div>
-    
+
+                <div class="inputs-container">
+                  <label for="tipo">Membresia:</label>
+                  <div class="input">
+                    <select name="" data-membresia-tipo>
+                      <option value="Mensual">Mensual</option>
+                      <option value="Bimestral">Bimestral</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div class="button-container">
                   <button type="submit">Agregar</button>
                 </div>
@@ -122,7 +156,7 @@
           </div>
 
           <div class="miembros-container">
-            <table class="miembros-table" data-miembros-table>
+            <table class="miembros-table" id="membersTable" data-miembros-table>
               <thead>
                 <tr>
                   <th>Nombre</th>
@@ -132,7 +166,7 @@
                   <th>Inicio Membresia</th>
                   <th>Fin Membresia</th>
                   <th>Membresia Tipo</th>
-                  <th>Opciones</th>
+                  <th>Editar</th>
                 </tr>
               </thead>
               <tbody data-miembros-tbody></tbody>

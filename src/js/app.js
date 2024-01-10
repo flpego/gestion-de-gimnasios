@@ -1,41 +1,50 @@
 import "../scss/main.scss";
-import { data } from "./data/members-data";
+import Swal from "sweetalert2";
 
 import loginHtml from "./elements/login.html.js";
+import membersHtml from "./elements/members.html..js";
 import loginManagers from "./managers/login.manager";
 import membersManager from "./managers/members.manager.js";
 
 export const app = () => {
+
+    if (window.location.pathname.includes("index.html")) {
+
+        Swal.fire({
+            title: "Para ingresar a la app",
+            text: "Usuario: admin || Contraseña: 1234",
+            icon: "success",
+        })
+
+    };
+
+
+    //validacion if para verificar si el formLogin esta presente en el DOM
     if (loginHtml.formLogin) {
         loginHtml.formLogin.onsubmit = (e) => {
             e.preventDefault();
-            loginManagers.login()
-        }
-    }
+            loginManagers.login();
+        };
+    };
+    // validacio  para que las funciones se ejecute solo en este path
     if (window.location.pathname.includes("/src/pages/miembros.html")) {
-        membersManager.renderMembers(data)
+
+        membersManager.renderMembers();
+        membersManager.capturarId();
+
+    };
+
+    if (window.location.pathname.includes("src/pages/admin-dashboard.html")) {
+        membersHtml.totalMembers.innerHTML = `
+        <ul>
+            <li id="totalMembers">${membersManager.totalMembersNumber}</li>
+        </ul>
+        `;
+
+        membersManager.actividadReciente();
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

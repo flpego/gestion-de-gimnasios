@@ -10,7 +10,7 @@ export const data = [
         tipo: 'Mensual',
     },
     {
-        id: "00013",
+        id: "010013",
         name: 'Lionel Andres Messi',
         telefono: '554399378',
         dni: '3155222',
@@ -20,7 +20,7 @@ export const data = [
         tipo: 'Mensual',
     },
     {
-        id: "00014",
+        id: "020014",
         name: 'Emiliano Martinez',
         telefono: '54698754',
         dni: '33555222',
@@ -30,7 +30,7 @@ export const data = [
         tipo: 'Mensual',
     },
     {
-        id: "00015",
+        id: "030015",
         name: 'Mc Alister',
         telefono: '545389378',
         dni: '38908764',

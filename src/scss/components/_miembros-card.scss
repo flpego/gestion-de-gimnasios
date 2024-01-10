@@ -54,11 +54,16 @@ tr {
                 button {
                     i {
                         font-size: 1.2rem;
-                        transition: 0.2s;
+                        transition: 0.1s;
+                        padding: 2px;
+
                         &:hover {
                             font-size: 1.4rem;
                             color: blueviolet;
                             cursor: pointer;
+                            border: 1px solid blueviolet;
+                            border-radius: 5px;
+                            box-shadow: -1px 1px 10px blue;
                         }
                     }
                 }
@@ -68,6 +73,15 @@ tr {
 }
 
 .ventana-modal {
+
+    @include bg-solid;
+    .bg-solid {
+        border-radius: 10px;
+        height: 3rem;
+        h4 {
+            color: $color-ligth;
+        }
+    }
     display: none;
     position: fixed;
     top: 0;
@@ -75,16 +89,50 @@ tr {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.856);
+    transition: 0.9s;
+
     section {
         width: 60%;
     }
-  
+    .form-register {
+        align-items: flex-end;
+        border-radius: 10px;
+        .close-icon-container{
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            &:hover{
+                color: red;
+            }
+        }
+        .input {
+            input {
+                background: $color-secondary;
+            }
+            #user-name {
+                background: rgb(218, 171, 55);
+            }
+            select {
+                background: rgb(218, 171, 55);
+                padding: .5rem 1rem;
+                border-radius: 10px;
+                &:hover {
+                background: rgb(241, 176, 9);
+                color: #000;
+                border: none;
+                }
+            }
+        }
+        button {
+            &:hover {
+                background: rgb(14, 155, 9);
+                color: $color-ligth;
+            }
+        }
+    }
 }
 
 .ventana-modal.show {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .9s;
-
 }

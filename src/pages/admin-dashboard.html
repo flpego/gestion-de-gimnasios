@@ -66,20 +66,31 @@
             </li>
           </ul>
         </aside>
-        <section class="contenido-principal" data-contenido-principal>
+        <section class="contenido-principal flex-center column" data-contenido-principal>
           <h1>Bienvenido Admin</h1>
-          <div>
-            <h2>Total Membresias este mes</h2>
+          
+            <div class="miembros-card-link">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-people-group"></i
+                  ><a href="/src/pages/miembros.html">Miembros</a>
+                </li>
+              </ul>
+
+            </div>
+          
+          
+          <div class="miembros-card-link">
+            <h2>Total Membresias</h2>
+            <div data-total-membresias></div>
           </div>
-          <div>
-            <h2>Usuarios por vencer</h2>
-          </div>
-          <div>
-            <h2>Pagos pendientes</h2>
-          </div>
-          <div>
-            <h2>acitiivida reciente</h2>
-          </div>
+
+          
+            <div class="miembros-card-link">
+              <h2>Miembros agregados recientemente</h2>
+            </div>
+            <div class="actividad-reciente" data-actividad-reciente></div>
+          
         </section>
       </div>
     </main>

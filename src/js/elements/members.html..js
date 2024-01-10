@@ -10,6 +10,12 @@ const formAddMember = document.querySelector("[data-form-add-member]");
 const inputUserName = document.querySelector("[data-input-user-name ]");
 const inputTelephone = document.querySelector("[data-input-telefono]");
 const inputDni = document.querySelector("[data-input-dni]");
+const iconCloseModal = document.querySelector("#close-modal-icon");
+const membresiaType = document.querySelector("[data-membresia-tipo]");
+const totalMembers = document.querySelector("[data-total-membresias]");
+const agregadosRecientemente = document.querySelector("[data-actividad-reciente]");
+const filterInput = document.querySelector("[data-filtrar-miembro]");
+const formBuscar = document.querySelector("[data-buscar]");
 
 export default {
     membersTable,
@@ -19,4 +25,10 @@ export default {
     inputUserName,
     inputTelephone,
     inputDni,
+    iconCloseModal,
+    membresiaType,
+    totalMembers,
+    agregadosRecientemente,
+    filterInput,
+    formBuscar
 }
