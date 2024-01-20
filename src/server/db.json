@@ -1,0 +1,15 @@
+{
+  "miembros": [],
+  "tarifas": [
+    {
+      "id": "8c0c53c3-fdbe-42aa-8b2a-c1c073a1149e",
+      "title": "",
+      "price": ""
+    },
+    {
+      "id": "218a12e0-67c5-4f78-95fe-0326dbae9568",
+      "title": "Mensual",
+      "price": "1000"
+    }
+  ]
+}

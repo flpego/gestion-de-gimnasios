@@ -19,55 +19,46 @@
       <nav>
         <ul>
           <li>
-            <button><i class="fa-solid fa-bars"></i></button>
+            <a href="/src/pages/admin-dashboard.html"
+              ><i class="fa-solid fa-house"></i>Inicio</a
+            >
           </li>
+          <li>
+            <a href="/src/pages/miembros.html">
+              <i class="fa-solid fa-people-group"></i>Miembros</a
+            >
+          </li>
+          <li>
+            <a href="/src/pages/registrar-membresias.html">
+              <i class="fa-solid fa-money-check-dollar"></i>Membresias</a
+            >
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
+            >
+          </li>
+          <li>
+            <a href="/src/pages/users.html">
+              <i class="fa-solid fa-users"></i>Usuarios</a
+            >
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
+          </li>
+
           <li id="usuario-header">
             Bienvenido ADMIN
             <button><i class="fa-solid fa-right-to-bracket"></i></button>
           </li>
         </ul>
+
       </nav>
     </header>
     <main>
-      <!-- Esto de aqui seria un menu lateral -->
-      <div class="dashboard-grid-container">
-        <aside class="menu-lateral">
-          <div>
-            <h4>Nombre del Gym</h4>
-            <p>Admin</p>
-          </div>
-          <ul>
-            <li>
-              <a href="/src/pages/admin-dashboard.html"
-                ><i class="fa-solid fa-house"></i>Inicio</a
-              >
-            </li>
-            <li>
-              <a href="/src/pages/miembros.html">
-                <i class="fa-solid fa-people-group"></i>Miembros</a
-              >
-            </li>
-            <li>
-              <a href="">
-                <i class="fa-solid fa-money-check-dollar"></i>Membresias</a
-              >
-            </li>
-            <li>
-              <a href="">
-                <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
-              >
-            </li>
-            <li>
-              <a href="/src/pages/users.html">
-                <i class="fa-solid fa-users"></i>Usuarios</a
-              >
-            </li>
-            <li>
-              <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
-            </li>
-          </ul>
-        </aside>
 
+      <div class="">
+       
         <section class="contenido-miembros" data-contenido-miembros>
           <div class="miembros-header">
             <h1>Miembros</h1>
@@ -143,7 +134,10 @@
                   <div class="input">
                     <select name="" data-membresia-tipo>
                       <option value="Mensual">Mensual</option>
+                      <option value="Mensual+cinta">Mensual+cinta</option>
                       <option value="Bimestral">Bimestral</option>
+                      <option value="Bimestral+cinta">Bimestral+cinta</option>
+
                     </select>
                   </div>
                 </div>

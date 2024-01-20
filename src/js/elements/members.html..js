@@ -13,9 +13,10 @@ const inputDni = document.querySelector("[data-input-dni]");
 const iconCloseModal = document.querySelector("#close-modal-icon");
 const membresiaType = document.querySelector("[data-membresia-tipo]");
 const totalMembers = document.querySelector("[data-total-membresias]");
-const agregadosRecientemente = document.querySelector("[data-actividad-reciente]");
 const filterInput = document.querySelector("[data-filtrar-miembro]");
 const formBuscar = document.querySelector("[data-buscar]");
+const ctx = document.getElementById("myChart");
+
 
 export default {
     membersTable,
@@ -28,7 +29,7 @@ export default {
     iconCloseModal,
     membresiaType,
     totalMembers,
-    agregadosRecientemente,
     filterInput,
-    formBuscar
+    formBuscar,
+    ctx
 }

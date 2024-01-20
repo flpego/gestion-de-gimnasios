@@ -19,53 +19,44 @@
       <nav>
         <ul>
           <li>
-            <button><i class="fa-solid fa-bars"></i></button>
+            <a href="/src/pages/admin-dashboard.html"
+              ><i class="fa-solid fa-house"></i>Inicio</a
+            >
           </li>
+          <li>
+            <a href="/src/pages/miembros.html">
+              <i class="fa-solid fa-people-group"></i>Miembros</a
+            >
+          </li>
+          <li>
+            <a href="/src/pages/registrar-membresias.html">
+              <i class="fa-solid fa-money-check-dollar"></i>Membresias</a
+            >
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
+            >
+          </li>
+          <li>
+            <a href="/src/pages/users.html">
+              <i class="fa-solid fa-users"></i>Usuarios</a
+            >
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
+          </li>
+
           <li id="usuario-header">
             Bienvenido ADMIN
             <button><i class="fa-solid fa-right-to-bracket"></i></button>
           </li>
         </ul>
+
       </nav>
     </header>
     <main>
-      <div class="dashboard-grid-container">
-        <aside class="menu-lateral">
-          <div>
-            <h4>Nombre del Gym</h4>
-            <p>Admin</p>
-          </div>
-          <ul>
-            <li>
-              <a href="/src/pages/admin-dashboard.html"
-                ><i class="fa-solid fa-house"></i>Inicio</a
-              >
-            </li>
-            <li>
-              <a href="/src/pages/miembros.html">
-                <i class="fa-solid fa-people-group"></i>Miembros</a
-              >
-            </li>
-            <li>
-              <a href="/src/pages/registrar-membresias.html">
-                <i class="fa-solid fa-money-check-dollar"></i>Membresias</a
-              >
-            </li>
-            <li>
-              <a href="">
-                <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
-              >
-            </li>
-            <li>
-              <a href="/src/pages/users.html">
-                <i class="fa-solid fa-users"></i>Usuarios</a
-              >
-            </li>
-            <li>
-              <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
-            </li>
-          </ul>
-        </aside>
+      <div class="">
         <section class="contenido-principal flex-center column" data-contenido-principal>
           <h1>Bienvenido Admin</h1>
           
@@ -86,11 +77,7 @@
           </div>
 
           
-            <div class="miembros-card-link">
-              <h2>Miembros agregados recientemente</h2>
-            </div>
-            <div class="actividad-reciente" data-actividad-reciente></div>
-          
+          <canvas id="myChart" width="400" height="100">hola</canvas>
         </section>
       </div>
     </main>

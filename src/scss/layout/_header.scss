@@ -4,23 +4,36 @@ header {
     background-repeat: no-repeat;
     object-fit: cover;
     nav {
-        margin-inline: 3rem;
+        margin-inline: 2rem;
         ul {
             @include d-flex(row, wrap, space-between, center, 0);
             list-style: none;
             li {
-                color: $color-primary;
                 button {
                     background-color: $color-dark;
                     font-size: 1.5rem;
                     border: none;
                 }
-                i {
-                    padding-inline: 2rem;
+
+                a {
                     color: $color-primary;
-                    &:hover {
-                        text-shadow: 1px 1px 15px $color-ligth;
+                    i {
+                        padding-inline: 0.5rem;
+                        color: $color-primary;
+
+    
                     }
+
+                        &:hover {
+                            text-shadow: 1px 1px 15px $color-ligth;
+                            color:  $color-violet;
+        
+                        
+                    }
+                }
+                &:hover {
+                    text-shadow: 1px 1px 15px $color-ligth;
+
                 }
             }
         }

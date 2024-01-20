@@ -9,10 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "json-server": "^1.0.0-alpha.21",
     "sass": "^1.69.5",
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "sweetalert2": "^11.10.2"
+    "chart.js": "^4.4.1",
+    "sweetalert2": "^11.10.2",
+    "uuid": "^9.0.1"
   }
 }
