@@ -122,17 +122,16 @@ const editar = async (memberId) => {
     });
 };
 
-const editMemberFunction = async (event) => {
+const editODeleteMemberFunction = async (event) => {
 
     const target = event.target;
     if (target.classList.contains("edit-button")) {
-        // Si se hace clic en un botón de edición, obtener el id del miembro
+        //  obtener el id del miembro con dataset.id
         const memberId = target.closest("tr").dataset.id;
         console.log("Clic en el botón de edición para el miembro con ID:", memberId);
        await editar(memberId);
     };
     if (target.classList.contains("delete-button")) {
-        // Si se hace clic en un botón de edición, obtener el id del miembro
         const memberId = target.closest("tr").dataset.id;
         console.log("Clic en el botón de edición para el miembro con ID:", memberId);
        await miembrosApi.deleteMember(memberId);
@@ -144,4 +143,4 @@ const membersTable = document.getElementById("membersTable");
 if (membersTable) {
     membersTable.addEventListener("click", editMemberFunction);
 }
-export default {  editMemberFunction };
+export default {  editODeleteMemberFunction };

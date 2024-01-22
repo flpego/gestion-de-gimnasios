@@ -54,6 +54,8 @@
 
 .delete-button {
     color: red;
+    padding: .5rem;
+    border-radius: 10px;
     &:hover {
         cursor: pointer;
     }

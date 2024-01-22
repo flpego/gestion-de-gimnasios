@@ -4,8 +4,8 @@ import membersApi from "../api/miembros.api.js";
 import loginHtml from "./elements/login.html.js";
 import loginManagers from "./managers/login.manager";
 import membersManager from "./managers/members.manager.js";
-import membersHtml from "./elements/members.html..js";
 import tarifasManager from "./managers/tarifas.manager.js";
+
 
 export const app = () => {
 
@@ -21,12 +21,12 @@ export const app = () => {
     // validacio  para que las funciones se ejecute solo en este path
     if (window.location.pathname.includes("/src/pages/miembros.html")) {
 
-        membersManager.editMemberFunction;
+        membersManager.editODeleteMemberFunction;
 
     };
 
     if(window.location.pathname.includes("/src/pages/registrar-membresias.html")) {
-        tarifasManager.addNewTarifa()
+       tarifasManager.renderTarifas();
     }
 
     if (window.location.pathname.includes("src/pages/admin-dashboard.html")) {

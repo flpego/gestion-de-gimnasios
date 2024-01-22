@@ -52,26 +52,35 @@
             <button><i class="fa-solid fa-right-to-bracket"></i></button>
           </li>
         </ul>
-
       </nav>
     </header>
     <main>
       <div class="">
-        <section class="contenido-principal flex-center column" data-contenido-principal>
-         
-            <form action="" data-form-registrar-membresias>
+        <section>
+          <form action="" data-form-registrar-membresias class="tarifas-form">
 
-                <label for="">Titulo de membresia</label>
-                <input type="text" placeholder="Escribe..." data-form-registrar-titleInput>
+            <div>
+              <label for="">Titulo de membresia</label>
 
-                <label for="">Selecciona valor $</label>
-                <input type="number" name="" id="" data-form-registrar-price>
-                
-                <button type="submit" >Registrar</button>
-            </form>
+              <input
+                type="text"
+                placeholder="Escribe..."
+                data-form-registrar-titleInput
+              />
+            </div>
 
-          <div class="membresias-container" data-membresias-container>
+            <div>
+              <label for="">Selecciona valor $</label>
 
+              <input type="number" name="" id="" data-form-registrar-price />
+            </div>
+
+
+            <button type="submit">Registrar</button>
+          </form>
+
+          <div class="membresias-container" data-tarifas-container>
+            <h4>Tarifas</h4>
           </div>
           <canvas id="myChart" width="400" height="100">hola</canvas>
         </section>

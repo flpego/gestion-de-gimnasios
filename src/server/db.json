@@ -2,14 +2,19 @@
   "miembros": [],
   "tarifas": [
     {
-      "id": "8c0c53c3-fdbe-42aa-8b2a-c1c073a1149e",
-      "title": "",
-      "price": ""
+      "id": "ae2aaf26-129c-4e3e-956c-19adcea0781f",
+      "title": "Mensual+Cinta",
+      "price": "1500"
     },
     {
-      "id": "218a12e0-67c5-4f78-95fe-0326dbae9568",
-      "title": "Mensual",
-      "price": "1000"
+      "id": "e53311f2-48c9-4925-bd6b-6f4a3d3c0642",
+      "title": "Bimestral",
+      "price": "1900"
+    },
+    {
+      "id": "a2f8b289-8ee3-4ddf-a513-42078d130ec7",
+      "title": "Bimestra+Cinta",
+      "price": "2600"
     }
   ]
 }
