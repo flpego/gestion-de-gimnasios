@@ -49,14 +49,35 @@
     color: blue;
     &:hover {
         cursor: pointer;
+        text-shadow: 1px 1px 10px blue;
+
     }
 }
 
 .delete-button {
-    color: red;
+    color: rgb(223, 0, 0);
     padding: .5rem;
     border-radius: 10px;
+    font-weight: 700;
+
     &:hover {
         cursor: pointer;
+        text-shadow: 1px 1px 10px red;
+    }
+}
+
+.pagar-button {
+    color: black;
+    background: yellow;
+    padding: .5rem;
+    border-radius: 100vmax;
+    &:hover {
+        cursor: pointer;
+        text-shadow: 1px 1px 10px yellow;
+        text-decoration: underline;
+        text-decoration-color: yellowgreen;
+        background:  $color-ligth;
+        box-shadow: 1px 1px 10px yellow;
+        font-weight: 700;
     }
 }

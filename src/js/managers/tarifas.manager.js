@@ -54,7 +54,6 @@ const renderTarifas = async() => {
         deleteTarifaBTN.addEventListener("click", deleteTarifa)
     });
 
-
  }
 
  const deleteTarifa = async(event) => { 

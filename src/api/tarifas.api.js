@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 
-
 const getTarifas = async () => {
     const res = await fetch("http://localhost:3000/tarifas");
     const data = await res.json();

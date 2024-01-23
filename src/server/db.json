@@ -1,5 +1,16 @@
 {
-  "miembros": [],
+  "miembros": [
+    {
+      "name": "Flavio Pegoraro",
+      "dni": "39383792",
+      "telefono": "2615590607",
+      "start": "23/1/2024",
+      "state": true,
+      "end": "23/3/2024",
+      "tipo": "Bimestral",
+      "id": "79bc8d77-095b-4874-bf87-5d372d016bab"
+    }
+  ],
   "tarifas": [
     {
       "id": "ae2aaf26-129c-4e3e-956c-19adcea0781f",
@@ -15,6 +26,11 @@
       "id": "a2f8b289-8ee3-4ddf-a513-42078d130ec7",
       "title": "Bimestra+Cinta",
       "price": "2600"
+    },
+    {
+      "id": "638d60a4-f1fe-4e74-91ac-a430e956af41",
+      "title": "Mensual",
+      "price": "1000"
     }
   ]
 }
