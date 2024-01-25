@@ -7,7 +7,8 @@ import Swal from "sweetalert2"
 const addNewTarifa = async () => {
     const tarifa = new Tarifas(
         tarifasHtml.inputRegMemb.value,
-        tarifasHtml.inputRegPrice.value
+        tarifasHtml.inputRegPrice.value,
+        tarifasHtml.inputsRegDays.value
     );
 
     try {
@@ -44,6 +45,7 @@ const renderTarifas = async() => {
        tarifasCardDiv.innerHTML = `
        <h4>Tarifa: ${tarifa.title}</h4>
        <p>Precio: $${tarifa.price}</p>
+       <p>Duracion: ${tarifa.days} dias</p>
        <button data-tarifa-id="${tarifa.id}" class="delete-button">Eliminar</button>
        `;
 
@@ -72,8 +74,6 @@ if (tarifasHtml.formRegMemb) {
     tarifasHtml.formRegMemb.reset();
     });
 }
-
-
 
 
 export default {

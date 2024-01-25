@@ -3,9 +3,9 @@ import membersHtml from "../elements/members.html.js";
 import { Member } from "../models/members.model";
 import Swal from "sweetalert2";
 
-import registrarPago from "./registrarPago.manager"
+import manejarPagos from "./manejarPagos.manager.js"
 
-
+//funcion para aniadir nuevo miembro
 const addNewMember = async () => {
     const newMember = new Member(
         membersHtml.inputUserName.value,
@@ -20,11 +20,11 @@ const addNewMember = async () => {
         icon: "success",
         timer: 2000,
     });
-
+    //renderiza la tabla despues de aniadir el nuevo miembro
     renderMembers();
 };
 
-const renderMembers = async () => {
+const renderMembers = async (member) => {
     membersHtml.membersTable.innerHTML = "";
 
     const membersDB = await miembrosApi.getMembers();
@@ -37,7 +37,7 @@ const renderMembers = async () => {
                 <td>${member.name}</td>
                 <td>${member.telefono}</td>
                 <td>${member.dni}</td>
-                <td class="estado-${member.state}" >${member.state ? "Activo" : "Vencido"}</td>
+                <td class="estado-${member.state}" >${member.state ? "Activo" : "Falta de pago"}</td>
                 <td>${member.start}</td>
                 <td>${member.end}</td>
                 <td>${member.tipo}</td>
@@ -60,27 +60,6 @@ if (membersHtml.addNewMemberButton) {
     });
 };
 
-// abrir y cerrar modal de agregar nuevos miembros
-if (membersHtml.modalAddMemberDiv) {
-    window.addEventListener("click", (e) => {
-        if (e.target == membersHtml.modalAddMemberDiv) {
-            membersHtml.modalAddMemberDiv.classList.remove("show");
-        };
-        membersHtml.iconCloseModal.addEventListener("click", () => {
-            membersHtml.modalAddMemberDiv.classList.remove("show");
-        });
-    });
-
-    //funcion submit
-    membersHtml.formAddMember.addEventListener("submit", (e) => {
-        e.preventDefault();
-        membersHtml.modalAddMemberDiv.classList.remove("show");
-        addNewMember();
-        membersHtml.formAddMember.reset(); //limpia losinputs
-    });
-
-    renderMembers();
-};
 
 //funcion para editar
 const editar = async (memberId) => {
@@ -122,8 +101,8 @@ const editar = async (memberId) => {
 const editODeleteMemberFunction = async (event) => {
 
     const target = event.target;
-//  obtener el id del miembro con dataset.id
-     const memberId = target.closest("tr").dataset.id;
+    //  obtener el id del miembro con dataset.id
+    const memberId = target.closest("tr").dataset.id;
     //funcion para editar
     if (target.classList.contains("edit-button")) {
         await editar(memberId);
@@ -136,7 +115,9 @@ const editODeleteMemberFunction = async (event) => {
     //funcion para pagar
     if (target.classList.contains("pagar-button")) {
         console.log(memberId);
-        registrarPago.pagar(memberId);
+        //llamamos a la funcion pagar del archivo registrarPago
+        manejarPagos.pagar(memberId);
+        renderMembers()
     }
 };
 // captura la tabla y detetcta donde se hizo click en la tabla
@@ -144,4 +125,26 @@ const membersTable = document.getElementById("membersTable");
 if (membersTable) {
     membersTable.addEventListener("click", editODeleteMemberFunction);
 }
-export default { editODeleteMemberFunction };
+
+// abrir y cerrar modal de agregar nuevos miembros
+if (membersHtml.modalAddMemberDiv) {
+    window.addEventListener("click", (e) => {
+        if (e.target == membersHtml.modalAddMemberDiv) {
+            membersHtml.modalAddMemberDiv.classList.remove("show");
+        };
+        membersHtml.iconCloseModal.addEventListener("click", () => {
+            membersHtml.modalAddMemberDiv.classList.remove("show");
+        });
+    });
+
+    //funcion submit
+    membersHtml.formAddMember.addEventListener("submit", (e) => {
+        e.preventDefault();
+        membersHtml.modalAddMemberDiv.classList.remove("show");
+        addNewMember();
+        membersHtml.formAddMember.reset(); //limpia losinputs
+    });
+
+    renderMembers();
+};
+export default { editODeleteMemberFunction, renderMembers };

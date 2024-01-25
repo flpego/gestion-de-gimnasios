@@ -4,33 +4,134 @@
       "name": "Flavio Pegoraro",
       "dni": "39383792",
       "telefono": "2615590607",
-      "start": "23/1/2024",
+      "start": "24/1/2024",
+      "end": "24/1/2024",
       "state": true,
-      "end": "23/3/2024",
-      "tipo": "Bimestral",
+      "tipo": "Mensual",
       "id": "79bc8d77-095b-4874-bf87-5d372d016bab"
+    },
+    {
+      "name": "joaquin",
+      "dni": "28332998",
+      "telefono": "2615627",
+      "start": "2024-01-24T22:20:51.860Z",
+      "state": true,
+      "end": "23/2/2024",
+      "tipo": "Mensual",
+      "id": "2758c6b6-91cc-4457-b135-049bef15337a"
+    },
+    {
+      "name": "luciana rica",
+      "dni": "224938900",
+      "telefono": "261782930",
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN",
+      "state": true,
+      "tipo": "Mensual",
+      "id": "dfb0b93d-e00d-49b8-b3b4-4711c6529399"
+    },
+    {
+      "name": "Lujan",
+      "dni": "383939302",
+      "telefono": "46123123",
+      "start": "24/1/2024",
+      "end": "24/1/2024",
+      "state": true,
+      "tipo": "Mensual",
+      "id": "d5e9bdba-61ac-4512-bbcb-35063839b2b4"
+    },
+    {
+      "name": "admin",
+      "dni": "2343556",
+      "telefono": "32094890",
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN",
+      "state": true,
+      "tipo": "Mensual",
+      "id": "d3e0c134-599e-4cc3-a2e5-a066c36d4542"
     }
   ],
   "tarifas": [
     {
-      "id": "ae2aaf26-129c-4e3e-956c-19adcea0781f",
-      "title": "Mensual+Cinta",
-      "price": "1500"
-    },
-    {
-      "id": "e53311f2-48c9-4925-bd6b-6f4a3d3c0642",
-      "title": "Bimestral",
-      "price": "1900"
-    },
-    {
-      "id": "a2f8b289-8ee3-4ddf-a513-42078d130ec7",
-      "title": "Bimestra+Cinta",
-      "price": "2600"
-    },
-    {
-      "id": "638d60a4-f1fe-4e74-91ac-a430e956af41",
+      "id": "5f1c7e90-4b65-4cf5-bd00-ec036f43ebb7",
       "title": "Mensual",
-      "price": "1000"
+      "price": "1000",
+      "days": "31"
+    }
+  ],
+  "pagos": [
+    {
+      "id": "0dba",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "date": "2024-01-25T00:32:49.749Z",
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "ea81",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "c37f",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "7af5",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "816d",
+      "memberId": "dfb0b93d-e00d-49b8-b3b4-4711c6529399",
+      "memberName": "luciana rica",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "eb62",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "d889",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
+    },
+    {
+      "id": "f6fe",
+      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
+      "memberName": "admin",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "24/1/2024",
+      "end": "NaN/NaN/NaN"
     }
   ]
 }
