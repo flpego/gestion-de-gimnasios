@@ -1,54 +1,34 @@
 {
   "miembros": [
     {
-      "name": "Flavio Pegoraro",
-      "dni": "39383792",
-      "telefono": "2615590607",
-      "start": "24/1/2024",
-      "end": "24/1/2024",
-      "state": true,
-      "tipo": "Mensual",
-      "id": "79bc8d77-095b-4874-bf87-5d372d016bab"
-    },
-    {
-      "name": "joaquin",
-      "dni": "28332998",
-      "telefono": "2615627",
-      "start": "2024-01-24T22:20:51.860Z",
-      "state": true,
-      "end": "23/2/2024",
-      "tipo": "Mensual",
-      "id": "2758c6b6-91cc-4457-b135-049bef15337a"
-    },
-    {
-      "name": "luciana rica",
-      "dni": "224938900",
-      "telefono": "261782930",
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN",
-      "state": true,
-      "tipo": "Mensual",
-      "id": "dfb0b93d-e00d-49b8-b3b4-4711c6529399"
-    },
-    {
-      "name": "Lujan",
-      "dni": "383939302",
-      "telefono": "46123123",
-      "start": "24/1/2024",
-      "end": "24/1/2024",
-      "state": true,
-      "tipo": "Mensual",
-      "id": "d5e9bdba-61ac-4512-bbcb-35063839b2b4"
-    },
-    {
-      "name": "admin",
+      "name": "Sergio Esposito",
       "dni": "2343556",
       "telefono": "32094890",
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN",
+      "start": "01/02/2024",
+      "end": "03/03/2024",
       "state": true,
       "tipo": "Mensual",
-      "id": "d3e0c134-599e-4cc3-a2e5-a066c36d4542"
+      "id": "9c4e7a0a-4ed5-412e-a33e-5e02ea76dfcd"
+    },
+    {
+      "name": "flavio",
+      "dni": "2343556",
+      "telefono": "32094890",
+      "start": "01/02/2024",
+      "end": "03/03/2024",
+      "state": true,
+      "tipo": "Mensual+cinta",
+      "id": "99aa22af-6f47-4967-825d-909e9fc6b623"
+    },
+    {
+      "name": "lionel messi",
+      "dni": "2343556",
+      "telefono": "32094890",
+      "start": "01/02/2024",
+      "end": "01/04/2024",
+      "state": true,
+      "tipo": "Bimestral",
+      "id": "f9af9215-a55b-45f6-94c2-49308a24a203"
     }
   ],
   "tarifas": [
@@ -57,81 +37,53 @@
       "title": "Mensual",
       "price": "1000",
       "days": "31"
+    },
+    {
+      "id": "24e84edf-0554-4a3a-894d-93cba1730e14",
+      "title": "Mensual+cinta",
+      "price": "1400",
+      "days": "31"
+    },
+    {
+      "id": "60db1343-e473-430c-b789-cb91e3870fe0",
+      "title": "Bimestral",
+      "price": "1800",
+      "days": "60"
+    },
+    {
+      "id": "3403d263-a154-4709-b734-b609623bb7b6",
+      "title": "Bimestral+cinta",
+      "price": "2400",
+      "days": "60"
     }
   ],
   "pagos": [
     {
-      "id": "0dba",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
+      "id": "4b5a",
+      "memberId": "9c4e7a0a-4ed5-412e-a33e-5e02ea76dfcd",
+      "memberName": "Sergio Esposito",
       "tarifaName": "Mensual",
       "tarifaPrice": 1000,
-      "date": "2024-01-25T00:32:49.749Z",
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
+      "start": "01/02/2024",
+      "end": "03/03/2024"
     },
     {
-      "id": "ea81",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
+      "id": "50ee",
+      "memberId": "99aa22af-6f47-4967-825d-909e9fc6b623",
+      "memberName": "flavio",
+      "tarifaName": "Mensual+cinta",
+      "tarifaPrice": 1400,
+      "start": "01/02/2024",
+      "end": "03/03/2024"
     },
     {
-      "id": "c37f",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
-    },
-    {
-      "id": "7af5",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
-    },
-    {
-      "id": "816d",
-      "memberId": "dfb0b93d-e00d-49b8-b3b4-4711c6529399",
-      "memberName": "luciana rica",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
-    },
-    {
-      "id": "eb62",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
-    },
-    {
-      "id": "d889",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
-    },
-    {
-      "id": "f6fe",
-      "memberId": "d3e0c134-599e-4cc3-a2e5-a066c36d4542",
-      "memberName": "admin",
-      "tarifaName": "Mensual",
-      "tarifaPrice": 1000,
-      "start": "24/1/2024",
-      "end": "NaN/NaN/NaN"
+      "id": "57cc",
+      "memberId": "f9af9215-a55b-45f6-94c2-49308a24a203",
+      "memberName": "lionel messi",
+      "tarifaName": "Bimestral",
+      "tarifaPrice": 1800,
+      "start": "01/02/2024",
+      "end": "01/04/2024"
     }
   ]
 }

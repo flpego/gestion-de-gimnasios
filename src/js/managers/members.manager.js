@@ -4,14 +4,21 @@ import { Member } from "../models/members.model";
 import Swal from "sweetalert2";
 
 import manejarPagos from "./manejarPagos.manager.js"
+import moment from "moment";
 
+//funcion para manejar fecha global del sistema
+const fechaHoy = () => {
+    const fechaHoy = moment().format("DD/MM/YYYY");;
+    membersHtml.fechaHoy.innerHTML = `
+    <span>Fecha del sistema: ${fechaHoy}</span>
+    `
+}
 //funcion para aniadir nuevo miembro
 const addNewMember = async () => {
     const newMember = new Member(
         membersHtml.inputUserName.value,
         membersHtml.inputTelephone.value,
         membersHtml.inputDni.value,
-        membersHtml.membresiaType.value
     );
 
     miembrosApi.registerNewMember(newMember)
@@ -38,9 +45,9 @@ const renderMembers = async (member) => {
                 <td>${member.telefono}</td>
                 <td>${member.dni}</td>
                 <td class="estado-${member.state}" >${member.state ? "Activo" : "Falta de pago"}</td>
-                <td>${member.start}</td>
-                <td>${member.end}</td>
-                <td>${member.tipo}</td>
+                <td>${member.start ? member.start : "Falta de pago"}</td>
+                <td>${member.end ? member.end : "Falta de pago"}</td>
+                <td>${member.tipo ? member.tipo : "Falta de pago"}</td>
                 <td>
                     <button class="edit-button">Edit</button>
                     /
@@ -67,13 +74,18 @@ const editar = async (memberId) => {
 
     Swal.fire({
         title: 'Editar Miembro',
-        html: ` <label>Nombre:</label>
+        html: ` <div class="modal-sweetAlert">
+                <label>Nombre:</label>
                 <input id="inputUserName" class="swal2-input" value="${memberToEdit.name}" placeholder="Nombre">
                 <label>DNI:</label>
                 <input id="inputDni" class="swal2-input" value="${memberToEdit.dni}" placeholder="DNI">
-                <input id="inputTelephone" class="swal2-input" value="${memberToEdit.telefono}" placeholder="Teléfono">
-                <input id="inputStart" class="swal2-input" value="${memberToEdit.start}" placeholder="Teléfono">
-                <input id="inputEnd" class="swal2-input" value="${memberToEdit.end}" placeholder="Teléfono">
+                
+                <label>Telefono:</label>
+                <input id="inputTelephone" class="swal2-input" value="${memberToEdit.telefono}" placeholder="Telefono">
+                
+                </div>
+        
+            
             `,
         focusConfirm: false,
         showCancelButton: true,
@@ -81,15 +93,13 @@ const editar = async (memberId) => {
             const nameValue = Swal.getPopup().querySelector('#inputUserName').value;
             const dniValue = Swal.getPopup().querySelector('#inputDni').value;
             const telephoneValue = Swal.getPopup().querySelector('#inputTelephone').value;
-            const startValue = Swal.getPopup().querySelector('#inputStart').value;
-            const endValue = Swal.getPopup().querySelector('#inputEnd').value;
             const miembroEditado = {
                 name: nameValue,
                 dni: dniValue,
                 telefono: telephoneValue,
-                start: startValue,
+                start: memberToEdit.start,
                 state: true,
-                end: endValue,
+                end: memberToEdit.end,
             };
             await miembrosApi.editMember(memberId, miembroEditado);
             renderMembers();
@@ -132,9 +142,10 @@ if (membersHtml.modalAddMemberDiv) {
         if (e.target == membersHtml.modalAddMemberDiv) {
             membersHtml.modalAddMemberDiv.classList.remove("show");
         };
-        membersHtml.iconCloseModal.addEventListener("click", () => {
-            membersHtml.modalAddMemberDiv.classList.remove("show");
-        });
+
+    });
+    membersHtml.iconCloseModal.addEventListener("click", () => {
+        membersHtml.modalAddMemberDiv.classList.remove("show");
     });
 
     //funcion submit
@@ -147,4 +158,4 @@ if (membersHtml.modalAddMemberDiv) {
 
     renderMembers();
 };
-export default { editODeleteMemberFunction, renderMembers };
+export default { editODeleteMemberFunction, renderMembers, fechaHoy };

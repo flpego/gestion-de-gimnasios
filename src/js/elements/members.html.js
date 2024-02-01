@@ -11,11 +11,10 @@ const inputUserName = document.querySelector("[data-input-user-name ]");
 const inputTelephone = document.querySelector("[data-input-telefono]");
 const inputDni = document.querySelector("[data-input-dni]");
 const iconCloseModal = document.querySelector("#close-modal-icon");
-const membresiaType = document.querySelector("[data-membresia-tipo]");
 const totalMembers = document.querySelector("[data-total-membresias]");
 const filterInput = document.querySelector("[data-filtrar-miembro]");
 const formBuscar = document.querySelector("[data-buscar]");
-const ctx = document.getElementById("myChart");
+const fechaHoy = document.querySelector("[data-fecha-actual]")
 
 
 export default {
@@ -27,9 +26,8 @@ export default {
     inputTelephone,
     inputDni,
     iconCloseModal,
-    membresiaType,
     totalMembers,
     filterInput,
     formBuscar,
-    ctx
+    fechaHoy
 }

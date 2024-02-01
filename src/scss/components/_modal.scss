@@ -1,0 +1,108 @@
+.config-modal {
+    @include bg-solid;
+    .bg-solid {
+        border-radius: 10px;
+        height: 3rem;
+        h4 {
+            color: $color-ligth;
+        }
+    }
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.856);
+    transition: 0.9s;
+
+}
+
+.ventana-modal {
+    @extend .config-modal;
+    section {
+        width: 60%;
+    }
+    .form-register {
+        align-items: flex-end;
+        border-radius: 10px;
+        .close-icon-container{
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            &:hover{
+                color: red;
+            }
+        }
+        .input {
+            input {
+                background: $color-secondary;
+            }
+            #user-name {
+                background: rgb(218, 171, 55);
+            }
+            select {
+                background: rgb(218, 171, 55);
+                padding: .5rem 1rem;
+                border-radius: 10px;
+                &:hover {
+                background: rgb(241, 176, 9);
+                color: #000;
+                border: none;
+                }
+            }
+        }
+        button {
+            &:hover {
+                background: rgb(14, 155, 9);
+                color: $color-ligth;
+            }
+        }
+    }
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-container {
+    width: 80%;
+    max-height: 90vh;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr ;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background: #0a0a0a;
+    overflow-y: auto;
+    div {
+        p, h4{
+            color: $color-ligth;
+        }
+    }
+
+    .tarifas-card {
+        background-color: gold;
+        p, h4 {
+            color: #000;
+        }
+        button {
+            background: #4caf50;
+            padding: .5rem 1rem;
+            border-radius: 10px;
+            color: $color-ligth;
+            cursor: pointer;
+            font-size: 1rem;
+            &:hover {
+                background-color: #327535; 
+            }
+        }
+    }
+  }

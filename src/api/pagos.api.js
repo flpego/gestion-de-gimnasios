@@ -13,4 +13,11 @@ const registrarUnPago = async (datosDePago) => {
     return data;
 }
 
-export default { registrarUnPago }
+const getPagos = async () => { 
+   const res = await fetch("http://localhost:3000/pagos/");
+   const data = await res.json();
+   console.log(data)
+   return data;
+ }
+
+export default { registrarUnPago, getPagos }

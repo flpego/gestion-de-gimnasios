@@ -163,3 +163,31 @@
     width: 100%;
    
 }
+
+.recordarme-container {
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+    label {
+        padding-inline: .5rem;
+        color: $color-violet;
+    }
+    input {
+        width: 1.3rem;
+        padding: .5rem;
+        border: 2px solid #888;
+        appearance: none;
+        &:hover{
+            border-color: $color-violet;
+        }
+        &:checked{
+            background-color: rgb(194, 72, 133);
+            background-image: url("/public/assets/icons/check-solid.svg");
+            background-repeat: no-repeat;
+        }
+        &:focus{
+            border-color: rgb(80, 67, 250);
+        }
+    }
+
+}

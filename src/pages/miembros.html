@@ -30,23 +30,14 @@
           </li>
           <li>
             <a href="/src/pages/registrar-membresias.html">
-              <i class="fa-solid fa-money-check-dollar"></i>Membresias</a
+              <i class="fa-solid fa-money-check-dollar"></i>Registrar Tarifas</a
             >
           </li>
           <li>
-            <a href="">
+            <a href="/src/pages/pagos.html">
               <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
             >
           </li>
-          <li>
-            <a href="/src/pages/users.html">
-              <i class="fa-solid fa-users"></i>Usuarios</a
-            >
-          </li>
-          <li>
-            <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
-          </li>
-
           <li id="usuario-header">
             Bienvenido ADMIN
             <button><i class="fa-solid fa-right-to-bracket"></i></button>
@@ -56,12 +47,11 @@
       </nav>
     </header>
     <main>
-
       <div class="">
-       
         <section class="contenido-miembros" data-contenido-miembros>
           <div class="miembros-header">
             <h1>Miembros</h1>
+
             <form data-buscar>
               <div class="input-div">
                 <input
@@ -74,10 +64,12 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
             </form>
+            
             <button class="button-style-green" data-miembro-add-button>
               <i class="fa-solid fa-user-plus"></i>
             </button>
           </div>
+          <div data-fecha-actual></div>
 
           <div class="ventana-modal" data-miembros-agregar-modal>
             <section class="form-register">
@@ -128,20 +120,6 @@
                     />
                   </div>
                 </div>
-
-                <div class="inputs-container">
-                  <label for="tipo">Membresia:</label>
-                  <div class="input">
-                    <select name="" data-membresia-tipo>
-                      <option value="Mensual">Mensual</option>
-                      <option value="Mensual+cinta">Mensual+cinta</option>
-                      <option value="Bimestral">Bimestral</option>
-                      <option value="Bimestral+cinta">Bimestral+cinta</option>
-
-                    </select>
-                  </div>
-                </div>
-
                 <div class="button-container">
                   <button type="submit">Agregar</button>
                 </div>
@@ -160,7 +138,7 @@
                   <th>Inicio Membresia</th>
                   <th>Fin Membresia</th>
                   <th>Membresia Tipo</th>
-                  <th>Editar</th>
+                  <th>Opciones</th>
                 </tr>
               </thead>
               <tbody data-miembros-tbody></tbody>

@@ -41,6 +41,10 @@
     justify-content: center;
 }
 
+.block {
+    display: block;
+}
+
 .column {
     flex-direction: column;
 }
@@ -80,4 +84,21 @@
         box-shadow: 1px 1px 10px yellow;
         font-weight: 700;
     }
+}
+
+.config-close-icon {
+    font-size: 1.5rem;
+    width: auto;
+    margin-bottom: 1rem;
+    color: #fff;
+    &:hover {
+        color: red;
+    }
+}
+
+.modal-sweetAlert {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    justify-items: end;
 }

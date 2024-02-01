@@ -38,39 +38,25 @@
               <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
             >
           </li>
+          <li>
+            <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
+          </li>
 
           <li id="usuario-header">
             Bienvenido ADMIN
-            <button data-logout><i class="fa-solid fa-right-to-bracket"></i></button>
+            <button><i class="fa-solid fa-right-to-bracket"></i></button>
           </li>
         </ul>
 
       </nav>
     </header>
     <main>
-      <div class="">
-        <section class="contenido-principal flex-center column" data-contenido-principal>
-          <h1>Bienvenido Admin</h1>
-          
-            <div class="miembros-card-link">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-people-group"></i
-                  ><a href="/src/pages/miembros.html">Miembros</a>
-                </li>
-              </ul>
+      <section data-pagos-section>
+      </section>
 
-            </div>
-          
-          
-          <div class="miembros-card-link">
-            <h2>Total Membresias</h2>
-            <div data-total-membresias></div>
-          </div>
-
-          
-        </section>
-      </div>
+      <section class="chart-section">
+        <canvas id="grafica-pagos"></canvas>
+      </section>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
