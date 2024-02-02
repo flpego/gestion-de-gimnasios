@@ -7,5 +7,4 @@ export class Member {
         this.dni = dni;
     };
 
-
 }

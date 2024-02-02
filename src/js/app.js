@@ -6,6 +6,7 @@ import loginManagers from "./managers/login.manager";
 import membersManager from "./managers/members.manager.js";
 import tarifasManager from "./managers/tarifas.manager.js";
 import renderPagosManager from "./managers/renderPagos.manager.js";
+import membersHtml from "./elements/members.html.js";
 
 
 export const app = () => {
@@ -37,19 +38,15 @@ export const app = () => {
     }
 
     if (window.location.pathname.includes("src/pages/admin-dashboard.html")) {
-        
+        membersHtml.totalMembers.innerHTML = `<span>${membersManager.allMembersLength}</span>`
+    }
+
+    if (window.location.pathname.includes("src/pages/pagos.html")) {
+       renderPagosManager.renderPagos();
     }
 
     if (loginManagers.logOutBtn) {
         loginManagers.logOutBtn.addEventListener("click", () => loginManagers.logOut());
     }
-    renderPagosManager.renderPagos()
+  
 }
-
-
-
-
-
-
-
-

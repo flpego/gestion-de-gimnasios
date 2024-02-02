@@ -31,12 +31,17 @@ const addNewMember = async () => {
     renderMembers();
 };
 
-const renderMembers = async (member) => {
+const getMembers = async() => {
+    const membersDB = await miembrosApi.getMembers();
+    return membersDB;
+}
+
+
+const renderMembers = async () => {
     membersHtml.membersTable.innerHTML = "";
 
-    const membersDB = await miembrosApi.getMembers();
-    const allMembers = await membersDB;
-
+    const allMembers = await getMembers();
+    
     allMembers.forEach((member) => {
         const tr = document.createElement("tr");
         tr.setAttribute('data-id', member.id);
@@ -59,6 +64,41 @@ const renderMembers = async (member) => {
         membersHtml.membersTable.appendChild(tr);
     });
 };
+
+
+const membersFiltrados = async (memberFilter) => {
+    membersHtml.membersTable.innerHTML = "";
+
+    const allMembers = await getMembers();
+
+    const filtrados = allMembers.filter((member) => {
+        return member.name.toLowerCase().includes(memberFilter.toLowerCase());
+    });
+
+    filtrados.forEach((member) => {
+        const tr = document.createElement("tr");
+        tr.setAttribute('data-id', member.id);
+        tr.innerHTML = `
+            <td>${member.name}</td>
+            <td>${member.telefono}</td>
+            <td>${member.dni}</td>
+            <td class="estado-${member.state}" >${member.state ? "Activo" : "Falta de pago"}</td>
+            <td>${member.start ? member.start : "Falta de pago"}</td>
+            <td>${member.end ? member.end : "Falta de pago"}</td>
+            <td>${member.tipo ? member.tipo : "Falta de pago"}</td>
+            <td>
+                <button class="edit-button">Edit</button>
+                /
+                <button class="delete-button">Eliminar</button>
+                /
+                <button class="pagar-button">Registrar Pago</button>
+            </td>
+        `;
+        membersHtml.membersTable.appendChild(tr);
+    });
+};
+
+
 
 //if para verificar que los elementos de html esten presentes en el dom
 if (membersHtml.addNewMemberButton) {
@@ -84,8 +124,6 @@ const editar = async (memberId) => {
                 <input id="inputTelephone" class="swal2-input" value="${memberToEdit.telefono}" placeholder="Telefono">
                 
                 </div>
-        
-            
             `,
         focusConfirm: false,
         showCancelButton: true,
@@ -127,13 +165,21 @@ const editODeleteMemberFunction = async (event) => {
         console.log(memberId);
         //llamamos a la funcion pagar del archivo registrarPago
         manejarPagos.pagar(memberId);
-        renderMembers()
+        renderMembers();
     }
 };
 // captura la tabla y detetcta donde se hizo click en la tabla
 const membersTable = document.getElementById("membersTable");
 if (membersTable) {
     membersTable.addEventListener("click", editODeleteMemberFunction);
+    membersHtml.buscarMiembroForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        renderMembers(searchInput.value);
+    });
+    membersHtml.searchInput.addEventListener("input", () => {
+        const member = membersHtml.searchInput.value;
+        membersFiltrados(member);
+    });
 }
 
 // abrir y cerrar modal de agregar nuevos miembros
@@ -158,4 +204,8 @@ if (membersHtml.modalAddMemberDiv) {
 
     renderMembers();
 };
-export default { editODeleteMemberFunction, renderMembers, fechaHoy };
+
+
+const all = await getMembers();
+const allMembersLength = await all.length;
+export default { editODeleteMemberFunction, renderMembers, fechaHoy, allMembersLength };

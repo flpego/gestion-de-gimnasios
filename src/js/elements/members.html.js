@@ -12,8 +12,8 @@ const inputTelephone = document.querySelector("[data-input-telefono]");
 const inputDni = document.querySelector("[data-input-dni]");
 const iconCloseModal = document.querySelector("#close-modal-icon");
 const totalMembers = document.querySelector("[data-total-membresias]");
-const filterInput = document.querySelector("[data-filtrar-miembro]");
-const formBuscar = document.querySelector("[data-buscar]");
+const buscarMiembroForm = document.querySelector("[data-buscar]");
+const searchInput = document.querySelector("#seacrh");
 const fechaHoy = document.querySelector("[data-fecha-actual]")
 
 
@@ -27,7 +27,7 @@ export default {
     inputDni,
     iconCloseModal,
     totalMembers,
-    filterInput,
-    formBuscar,
+    buscarMiembroForm,
+    searchInput,
     fechaHoy
 }

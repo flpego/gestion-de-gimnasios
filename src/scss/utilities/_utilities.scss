@@ -1,24 +1,16 @@
-
 .estado-Activo {
-    
-    background-color: rgba(0, 190, 0, 0.747);
+    color: rgba(0, 190, 0, 0.747);
     border-radius: 50px;
-    box-shadow: 1px 1px 10px rgb(0, 190, 0);
     border-bottom: none;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: #000;
-
 }
 
 .estado-Vencido {
     @extend .estado-Activo;
-    background-color: rgba(199, 20, 20, 0.822);
-    color: #fff;
-
     box-shadow: 1px 1px 10px rgb(148, 0, 0);
-
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .estado-false {
@@ -27,7 +19,7 @@
 }
 
 .estado-true {
-   color: rgba(0, 190, 0, 0.747);
+    color: rgba(0, 190, 0, 0.747);
     @extend .estado-false;
 }
 
@@ -54,13 +46,12 @@
     &:hover {
         cursor: pointer;
         text-shadow: 1px 1px 10px blue;
-
     }
 }
 
 .delete-button {
     color: rgb(223, 0, 0);
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 10px;
     font-weight: 700;
 
@@ -73,14 +64,14 @@
 .pagar-button {
     color: black;
     background: yellow;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 100vmax;
     &:hover {
         cursor: pointer;
         text-shadow: 1px 1px 10px yellow;
         text-decoration: underline;
         text-decoration-color: yellowgreen;
-        background:  $color-ligth;
+        background: $color-ligth;
         box-shadow: 1px 1px 10px yellow;
         font-weight: 700;
     }

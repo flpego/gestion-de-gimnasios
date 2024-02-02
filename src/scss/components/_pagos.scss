@@ -1,0 +1,44 @@
+.container-pagos-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pagos-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 20%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    h4 {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    p {
+        background: rgb(255, 255, 165);
+        color: #424242;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+}
+
+
+.table-pagos-section{
+    margin: 20px;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+}

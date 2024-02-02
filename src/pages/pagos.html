@@ -42,20 +42,36 @@
             <a href=""><i class="fa-solid fa-gear"></i>Configurar </a>
           </li>
 
-          <li id="usuario-header">
-            Bienvenido ADMIN
-            <button><i class="fa-solid fa-right-to-bracket"></i></button>
+          <li>
+            <span id="usuario-header"></span>
+            <button data-logout>
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
           </li>
         </ul>
-
       </nav>
     </header>
     <main>
-      <section data-pagos-section>
-      </section>
+      <section class="container-pagos-section" data-pagos-section></section>
 
-      <section class="chart-section">
-        <canvas id="grafica-pagos"></canvas>
+      <article>
+        <label for="fechaSelect">Seleccionar Fecha:</label>
+        <select id="fechaSelect"></select>
+  
+        <button data-filtrar-pagos>Aplicar Filtros</button>
+      </article>
+
+
+      <section class="table-pagos-section">
+        <table data-table-pagos>
+          <thead>
+            <tr>
+              <th>Pagos registrados</th>
+              <th>Total en $</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
       </section>
     </main>
     <script type="module" src="/main.js"></script>

@@ -61,7 +61,8 @@ const pagar = async (memberId) => {
     const btnCerrarModal = event.target.closest(".config-close-icon"); // obtiene la clase donde se hizo click
     if (btnCerrarModal) {
       document.body.removeChild(pagarModalDiv); //cierra el modal
-    }
+    };
+
     const btnGenerarPago = event.target.closest(".btn-generar-pago");
     if (btnGenerarPago) {
       const tarifaId = btnGenerarPago.getAttribute("data-tarifa-id");

@@ -1,34 +1,43 @@
 {
   "miembros": [
     {
-      "name": "Sergio Esposito",
-      "dni": "2343556",
-      "telefono": "32094890",
-      "start": "01/02/2024",
-      "end": "03/03/2024",
-      "state": true,
-      "tipo": "Mensual",
-      "id": "9c4e7a0a-4ed5-412e-a33e-5e02ea76dfcd"
-    },
-    {
       "name": "flavio",
-      "dni": "2343556",
+      "dni": "3333333",
       "telefono": "32094890",
-      "start": "01/02/2024",
-      "end": "03/03/2024",
+      "start": "02/02/2024",
       "state": true,
-      "tipo": "Mensual+cinta",
-      "id": "99aa22af-6f47-4967-825d-909e9fc6b623"
+      "end": "02/04/2024",
+      "id": "2ccdc416-469b-4670-8454-cf71fc6c23dd"
     },
     {
-      "name": "lionel messi",
-      "dni": "2343556",
-      "telefono": "32094890",
-      "start": "01/02/2024",
-      "end": "01/04/2024",
-      "state": true,
-      "tipo": "Bimestral",
-      "id": "f9af9215-a55b-45f6-94c2-49308a24a203"
+      "name": "admin",
+      "dni": "12313123",
+      "telefono": "122131",
+      "start": "02/02/2024",
+      "end": "02/04/2024",
+      "state": "Activo",
+      "tipo": "Bimestral+cinta",
+      "id": "c0da4710-f518-432e-bd61-a6716a19b8fc"
+    },
+    {
+      "name": "carlos",
+      "dni": "123123",
+      "telefono": "123123",
+      "start": "02/02/2024",
+      "end": "04/03/2024",
+      "state": "Activo",
+      "tipo": "Mensual",
+      "id": "d8237402-aead-4aa7-b06d-7558280ee320"
+    },
+    {
+      "name": "san juan de dios",
+      "dni": "23848234",
+      "telefono": "45786",
+      "start": "02/02/2024",
+      "end": "04/03/2024",
+      "state": "Activo",
+      "tipo": "Mensual",
+      "id": "76844e64-e702-4549-8586-0441242d9c49"
     }
   ],
   "tarifas": [
@@ -84,6 +93,78 @@
       "tarifaPrice": 1800,
       "start": "01/02/2024",
       "end": "01/04/2024"
+    },
+    {
+      "id": "57cc",
+      "memberId": "f9af9215-a55b-45f6-94c2-49308a24a203",
+      "memberName": "lionel messi",
+      "tarifaName": "Bimestral",
+      "tarifaPrice": 1800,
+      "start": "01/01/2024",
+      "end": "01/04/2024"
+    },
+    {
+      "id": "57cc",
+      "memberId": "f9af9215-a55b-45f6-94c2-49308a24a203",
+      "memberName": "lionel messi",
+      "tarifaName": "Bimestral",
+      "tarifaPrice": 1800,
+      "start": "01/03/2024",
+      "end": "01/04/2024"
+    },
+    {
+      "id": "57cc",
+      "memberId": "f9af9215-a55b-45f6-94c2-49308a24a203",
+      "memberName": "lionel messi",
+      "tarifaName": "Bimestral",
+      "tarifaPrice": 1800,
+      "start": "01/04/2024",
+      "end": "01/04/2024"
+    },
+    {
+      "id": "9bfe",
+      "memberId": "1e0f53d6-4182-4ff3-b2e7-a5457f0ad33d",
+      "memberName": "Juana Del Carmen",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "01/02/2024",
+      "end": "03/03/2024"
+    },
+    {
+      "id": "354e",
+      "memberId": "2ccdc416-469b-4670-8454-cf71fc6c23dd",
+      "memberName": "flavio",
+      "tarifaName": "Bimestral+cinta",
+      "tarifaPrice": 2400,
+      "start": "02/02/2024",
+      "end": "02/04/2024"
+    },
+    {
+      "id": "9c2d",
+      "memberId": "c0da4710-f518-432e-bd61-a6716a19b8fc",
+      "memberName": "admin",
+      "tarifaName": "Bimestral+cinta",
+      "tarifaPrice": 2400,
+      "start": "02/02/2024",
+      "end": "02/04/2024"
+    },
+    {
+      "id": "4805",
+      "memberId": "d8237402-aead-4aa7-b06d-7558280ee320",
+      "memberName": "carlos",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "02/02/2024",
+      "end": "04/03/2024"
+    },
+    {
+      "id": "5ba0",
+      "memberId": "76844e64-e702-4549-8586-0441242d9c49",
+      "memberName": "san juan de dios",
+      "tarifaName": "Mensual",
+      "tarifaPrice": 1000,
+      "start": "02/02/2024",
+      "end": "04/03/2024"
     }
   ]
 }

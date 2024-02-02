@@ -1,14 +1,21 @@
 
 import loginHtml from "../elements/login.html";
 
+const userSpan = document.querySelector("#usuario-header");
+
+if (userSpan) {
+    userSpan.innerHTML = `
+${"admin"}
+`}
+
+
 const login = () => {
     let userValue = loginHtml.user.value;
     let passwordValue = loginHtml.password.value;
     let checkRememberValue = loginHtml.checkRememberme.checked;
     if (userValue === "admin" && passwordValue === "1234") {
         window.location.href = "/src/pages/admin-dashboard.html"
-        console.log("Iniciaste sesion");
-        const token = `${userValue+passwordValue}`
+        const token = `${userValue + passwordValue}`
         if (checkRememberValue) {
             localStorage.setItem("loginOn", token)
         }

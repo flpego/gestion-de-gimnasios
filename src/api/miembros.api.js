@@ -5,14 +5,12 @@ import Swal from "sweetalert2";
 const getMembers = async () => {
     const res = await fetch("http://localhost:3000/miembros");
     const data = await res.json();
-    console.log(data)
     return data;
-}
+};
 //obtener un miembro por ID GET
 const getMemberById = async (id) => {
     const res = await fetch(`http://localhost:3000/miembros/${id}`);
     const data = await res.json();
-    console.log(data)
     return data;
 };
 
@@ -27,7 +25,6 @@ const registerNewMember = async (member) => {
 
     });
     const data = await res.json();
-    console.log(data)
     return data;
 };
 
@@ -43,7 +40,6 @@ const editMember = async(id ,member) => {
         
     });
     const data = await res.json();
-    console.log(data)
     return data;
 }
 
@@ -62,9 +58,8 @@ const deleteMember = async(id) => {
         icon: "error",
         timer: 1500,
     })
-    console.log(res)
     return res;
-}
+};
 
 
 
