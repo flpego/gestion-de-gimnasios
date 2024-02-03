@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 
 import manejarPagos from "./manejarPagos.manager.js"
 import moment from "moment";
+import { fetchAvatares } from "../../api/robohash.api.js";
 
 //funcion para manejar fecha global del sistema
 const fechaHoy = () => {
@@ -15,20 +16,24 @@ const fechaHoy = () => {
 }
 //funcion para aniadir nuevo miembro
 const addNewMember = async () => {
+    const number = Math.floor(Math.random() * 150)
+    const avatar = await fetchAvatares(number)
+    console.log(avatar);
     const newMember = new Member(
-        membersHtml.inputUserName.value,
-        membersHtml.inputTelephone.value,
-        membersHtml.inputDni.value,
+        name: membersHtml.inputUserName.value,
+        telefono: membersHtml.inputTelephone.value,
+        dni: membersHtml.inputDni.value,
+        avatar: avatar.url
     );
 
-    miembrosApi.registerNewMember(newMember)
+    await miembrosApi.registerNewMember(newMember)
     Swal.fire({
         title: `${membersHtml.inputUserName.value} agregado con exito`,
         icon: "success",
         timer: 2000,
     });
     //renderiza la tabla despues de aniadir el nuevo miembro
-    renderMembers();
+   await renderMembers();
 };
 
 const getMembers = async() => {
@@ -43,10 +48,12 @@ const renderMembers = async () => {
     const allMembers = await getMembers();
     
     allMembers.forEach((member) => {
+
         const tr = document.createElement("tr");
         tr.setAttribute('data-id', member.id);
         tr.innerHTML = `
                 <td>${member.name}</td>
+                <td><img src=${member.avatar} alt=""></td>
                 <td>${member.telefono}</td>
                 <td>${member.dni}</td>
                 <td class="estado-${member.state}" >${member.state ? "Activo" : "Falta de pago"}</td>
