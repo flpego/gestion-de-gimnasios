@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 
 import manejarPagos from "./manejarPagos.manager.js"
 import moment from "moment";
-import { fetchAvatares } from "../../api/robohash.api.js";
 
 //funcion para manejar fecha global del sistema
 const fechaHoy = () => {
@@ -16,14 +15,11 @@ const fechaHoy = () => {
 }
 //funcion para aniadir nuevo miembro
 const addNewMember = async () => {
-    const number = Math.floor(Math.random() * 150)
-    const avatar = await fetchAvatares(number)
-    console.log(avatar);
+
     const newMember = new Member(
-        name: membersHtml.inputUserName.value,
-        telefono: membersHtml.inputTelephone.value,
-        dni: membersHtml.inputDni.value,
-        avatar: avatar.url
+        membersHtml.inputUserName.value,
+        membersHtml.inputTelephone.value,
+        membersHtml.inputDni.value,
     );
 
     await miembrosApi.registerNewMember(newMember)
@@ -33,10 +29,10 @@ const addNewMember = async () => {
         timer: 2000,
     });
     //renderiza la tabla despues de aniadir el nuevo miembro
-   await renderMembers();
+    await renderMembers();
 };
 
-const getMembers = async() => {
+const getMembers = async () => {
     const membersDB = await miembrosApi.getMembers();
     return membersDB;
 }
@@ -46,20 +42,19 @@ const renderMembers = async () => {
     membersHtml.membersTable.innerHTML = "";
 
     const allMembers = await getMembers();
-    
+
     allMembers.forEach((member) => {
 
         const tr = document.createElement("tr");
         tr.setAttribute('data-id', member.id);
         tr.innerHTML = `
                 <td>${member.name}</td>
-                <td><img src=${member.avatar} alt=""></td>
                 <td>${member.telefono}</td>
                 <td>${member.dni}</td>
                 <td class="estado-${member.state}" >${member.state ? "Activo" : "Falta de pago"}</td>
-                <td>${member.start ? member.start : "Falta de pago"}</td>
-                <td>${member.end ? member.end : "Falta de pago"}</td>
-                <td>${member.tipo ? member.tipo : "Falta de pago"}</td>
+                <td class="estado-${member.state}" >${member.start ? member.start : "Falta de pago"}</td>
+                <td class="estado-${member.state}" >${member.end ? member.end : "Falta de pago"}</td>
+                <td class="estado-${member.state}" >${member.tipo ? member.tipo : "Falta de pago"}</td>
                 <td>
                     <button class="edit-button">Edit</button>
                     /

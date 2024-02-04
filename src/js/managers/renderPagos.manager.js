@@ -58,7 +58,7 @@ const renderPagos = async () => {
         pagosSection.appendChild(pagosDiv);
     });
     const sumarTotal = () => {
-        if (totalVacio.length > 1) {
+        if (totalVacio.length >= 1) {
             const totalSumado = totalVacio.reduce((a, b) => a + b);//suma todos los pagos y devuelve el total
             return totalSumado
         }

@@ -20,30 +20,39 @@
         <ul>
           <li>
             <a href="/src/pages/admin-dashboard.html"
-              ><i class="fa-solid fa-house"></i>Inicio</a
-            >
+              >Inicio<i class="fa-solid fa-house"></i
+            ></a>
           </li>
           <li>
             <a href="/src/pages/miembros.html">
-              <i class="fa-solid fa-people-group"></i>Miembros</a
-            >
+              Miembros <i class="fa-solid fa-people-group"></i
+            ></a>
           </li>
           <li>
             <a href="/src/pages/registrar-membresias.html">
-              <i class="fa-solid fa-money-check-dollar"></i>Registrar Tarifas</a
-            >
+              Registrar Tarifas<i class="fa-solid fa-money-check-dollar"></i
+            ></a>
           </li>
           <li>
             <a href="/src/pages/pagos.html">
-              <i class="fa-solid fa-circle-dollar-to-slot"></i>Pagos</a
-            >
+              Pagos<i class="fa-solid fa-circle-dollar-to-slot"></i
+            ></a>
           </li>
-          <li>
+          <ul>
+            <li>
+              <a href="/src/pages/users.html"
+                >Usuarios <i class="fa-regular fa-user"></i
+              ></a>
+            </li>
+          </ul>
+          <li class="flex-center">
             <span id="usuario-header"></span>
-            <button data-logout><i class="fa-solid fa-right-to-bracket"></i></button>
+            <button class="logout" data-logout>
+              Salir
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
           </li>
         </ul>
-
       </nav>
     </header>
     <main>
@@ -64,10 +73,13 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
             </form>
-            
-            <button class="button-style-green" data-miembro-add-button>
-              <i class="fa-solid fa-user-plus"></i>
-            </button>
+            <div class="agregar-miembro-div">
+              <p>Agregar nuevo:</p>
+              <button class="button-style-green" data-miembro-add-button>
+                <i class="fa-solid fa-user-plus"></i>
+              </button>
+            </div>
+
           </div>
           <div data-fecha-actual></div>
 
@@ -132,7 +144,6 @@
               <thead>
                 <tr>
                   <th>Nombre</th>
-                  <th>avatar</th>
                   <th>Telefono</th>
                   <th>DNI</th>
                   <th>Estado</th>

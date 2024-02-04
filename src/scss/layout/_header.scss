@@ -39,3 +39,16 @@ header {
         }
     }
 }
+
+#usuario-header {
+    color: aliceblue;
+    margin-inline: .5rem;
+}
+
+.logout {
+    font-size: 1rem;
+    color: aliceblue;
+   &:hover {
+    color: red;
+   }
+}

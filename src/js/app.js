@@ -7,10 +7,20 @@ import membersManager from "./managers/members.manager.js";
 import tarifasManager from "./managers/tarifas.manager.js";
 import renderPagosManager from "./managers/renderPagos.manager.js";
 import membersHtml from "./elements/members.html.js";
+import usersManager from "./managers/users.manager.js";
 
 
 export const app = () => {
 
+    localStorage.clear();
+
+    //mostrar el usuario en el header
+    const spanHeader = document.querySelector("[data-usuario-header]");
+    if (spanHeader){
+   const userNameHeader = localStorage.getItem("userName");
+
+   spanHeader.innerHTML = `${userNameHeader} <i class="fa-solid fa-chalkboard-user"></i> `
+}
 
     membersApi.getMembers();
 
@@ -33,8 +43,8 @@ export const app = () => {
         membersManager.fechaHoy()
     };
 
-    if(window.location.pathname.includes("/src/pages/registrar-membresias.html")) {
-       tarifasManager.renderTarifas();
+    if (window.location.pathname.includes("/src/pages/registrar-membresias.html")) {
+        tarifasManager.renderTarifas();
     }
 
     if (window.location.pathname.includes("src/pages/admin-dashboard.html")) {
@@ -42,11 +52,14 @@ export const app = () => {
     }
 
     if (window.location.pathname.includes("src/pages/pagos.html")) {
-       renderPagosManager.renderPagos();
+        renderPagosManager.renderPagos();
     }
 
     if (loginManagers.logOutBtn) {
         loginManagers.logOutBtn.addEventListener("click", () => loginManagers.logOut());
+
     }
-  
+    if (window.location.pathname.includes("src/pages/users.html")) {
+        usersManager.renderUsers();
+    }
 }

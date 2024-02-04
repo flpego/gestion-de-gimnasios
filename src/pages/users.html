@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="../src/scss/main.scss" />
+
+    <title>Users</title>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li>
+              <a href="/src/pages/admin-dashboard.html"
+                >Inicio<i class="fa-solid fa-house"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/src/pages/miembros.html">
+                Miembros <i class="fa-solid fa-people-group"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/src/pages/registrar-membresias.html">
+                Registrar Tarifas<i class="fa-solid fa-money-check-dollar"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/src/pages/pagos.html">
+                Pagos<i class="fa-solid fa-circle-dollar-to-slot"></i
+              ></a>
+            </li>
+          
+              <li>
+                <a href="/src/pages/users.html"
+                  >Usuarios <i class="fa-regular fa-user"></i
+                ></a>
+              </li>
+     
+  
+              <li class="flex-center">
+                <span id="usuario-header"></span>
+                <button class="logout" data-logout>
+                  Salir
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+              </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="user-form-section">
+            <h4>Registrar nuevo usuario</h4>
+            <form data-register-user>
+              <label for="username">Nombre de usuario</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Nombre de Usuario"
+                data-input-username
+              />
+              <label for="password">Escriba una contraseña</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Escriba una contraseña"
+                data-input-password
+              />
+              <label for="password2">Repita la contraseña</label>
+              <input
+                type="password"
+                name="password2"
+                id="password2"
+                placeholder="Repita la contraseña"
+                data-input-password2
+              />
+              <label for="categoria">Categoria</label>
+              <select
+                name="categoria"
+                id="categoria"
+                placeholder="categoria"
+                data-register-select
+              >
+                <optgroup label="Categorías de Usuarios">
+                  <option value="admin">Admin</option>
+                  <option value="entrenador">Entrenador</option>
+                  <option value="encargado">Encargado de turno</option>
+                </optgroup>
+              </select>
+      
+              <button type="submit" data-register-user-btn>Registrar</button>
+            </form>
+          </section>
+          <section class="users-section">
+            <article>
+              <h4>Usuarios:</h4>
+              <table data-users-table>
+                <thead>
+                  <th>Usuario</th>
+                  <th>Categoria</th>
+                </thead>
+                <tbody data-users-table-body></tbody>
+              </table>
+            </article>
+          </section>
+      </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,26 +1,32 @@
 
+import Swal from "sweetalert2";
+import usersApi from "../../api/users.api";
 import loginHtml from "../elements/login.html";
 
-const userSpan = document.querySelector("#usuario-header");
 
-if (userSpan) {
-    userSpan.innerHTML = `
-${"admin"}
-`}
+const login = async () => {
 
-
-const login = () => {
-    let userValue = loginHtml.user.value;
-    let passwordValue = loginHtml.password.value;
-    let checkRememberValue = loginHtml.checkRememberme.checked;
-    if (userValue === "admin" && passwordValue === "1234") {
+    const users =await usersApi.getUsers();
+    const userValue = loginHtml.user.value;
+    const passwordValue = loginHtml.password.value;
+    const checkRememberValue = loginHtml.checkRememberme.checked;
+    localStorage.setItem("userName", userValue)
+    const findUser = users.find(user => user.name === userValue && user.password === passwordValue);
+    console.log(findUser);
+    if (findUser) {
         window.location.href = "/src/pages/admin-dashboard.html"
-        const token = `${userValue + passwordValue}`
+        const token = findUser;
         if (checkRememberValue) {
             localStorage.setItem("loginOn", token)
         }
+
     } else {
-        alert("Usuario y/o contrasenia incorrectos");
+        Swal.fire({
+            title: "Usuario y/o contrasenia incorrectos",
+            icon: "error",
+            timer: 1000
+        });
+        loginHtml.formLogin.reset();
     }
 }
 if (loginHtml.formLogin) {
@@ -29,7 +35,7 @@ if (loginHtml.formLogin) {
         login()
     });
 }
-
+//funcion para saloir
 const logOut = () => {
     window.location.href = "/localhost:5173";
     localStorage.clear();
